@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<title>摇奖转盘</title>
+
+<link href="__CSS__/turntable/index.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="__JS__/turntable/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="__JS__/turntable/awardrotate.js"></script>
+<script type="text/javascript" src="__JS__/turntable/index.js"></script>
+<style>
+	.fxm_left{
+		background:#eb2a30;
+	}
+	.fxm_left img{
+		width: 4vmin;
+		height: 6vmin;
+		margin-left: 3vmin;
+		margin-top:3vmin;
+	}
+</style>
+</head>
+<body>
+	<div class="fxm_left"><a href="{:U('/Shop/member/mine')}"><img src="__IMG__/left0.png"></a></div>
+	<!-- 弹出层 -->
+	<!-- <div class="cover"></div> -->
+	<!-- <div class="covers1">
+		<div class="covers_quit">
+			<img src="__IMG__/turntable/pop_up_quit_icon.png" alt="pop_up_quit_icon" />
+		</div>
+		<div class="covers_icon">
+			<img src="__IMG__/turntable/task_draw_reward_free_img.png" alt="task_draw_reward_free_img" />
+		</div>
+		<div class="covers_font">恭喜您获得1次<span>免费</span>的机会</div>
+		<div class="covers_btn">立即前往抽奖</div>
+	</div> -->
+
+	<div class="covers2">
+		<div class="covers_quit">
+			<img src="__IMG__/turntable/pop_up_quit_icon.png" alt="pop_up_quit_icon" />
+		</div>
+		<div class="covers_icon">
+			<img src="__IMG__/turntable/task_draw_reward_gereward_img.png" alt="task_draw_reward_gereward_img" />
+		</div>
+		<div class="covers_font" id="res">恭喜您获得奖励</div>
+		<div class="covers_btn covers_btn1">再抽一次</div>
+		<a href="#rules_con_footer"><div class="covers_btn2">收下奖励</div></a>
+	</div>
+
+	<div class="covers3">
+		<div class="covers_quit">
+			<img src="__IMG__/turntable/pop_up_quit_icon.png" alt="pop_up_quit_icon" />
+		</div>
+		<div class="covers_icon">
+			<img src="__IMG__/turntable/task_draw_reward_tip_img.png" alt="task_draw_reward_tip_img" />
+		</div>
+		<div class="covers_font">免费机会已经用完</div>
+		<div class="covers_btn covers_btn1">再抽一次</div>
+		<a href="#rules_con_footer"><div class="covers_btn2">收下奖励</div></a>
+	</div>
+	<!-- 收益 -->
+	<a href="{:U('Shop/Member/turntablelist')}"><div class="float_btn">中奖明细</div></a>
+	<!-- 抽奖转盘 -->
+	<div class="turntable">
+		<img class="turntablebg" src="__IMG__/turntable/task_draw_reward_default_bg.png" alt="turntableBg"/>
+		<div class="rotate" id="rotate">
+			<img src="__IMG__/turntable/task_draw_reward_bg.png"/>
+			<div class="box-lottery">
+				<div class="lottery-wrap">
+					<span class="lottery-span1" data-id="1">
+						<i>{$info.0.name}</i><img src="{$info.0.img}" alt="商品">
+					</span>
+					<span class="lottery-span2" data-id="2">
+						<i>{$info.1.name}</i><img src="{$info.1.img}" alt="商品">
+					</span>
+					<span class="lottery-span3" data-id="3">
+						<i>{$info.2.name}</i><img src="{$info.2.img}" alt="商品">
+					</span>
+					<span class="lottery-span4" data-id="4">
+						<i>{$info.3.name}</i><img src="{$info.3.img}" alt="商品">
+					</span>
+					<span class="lottery-span5" data-id="5">
+						<i>{$info.4.name}</i><img src="{$info.4.img}" alt="商品">
+					</span>
+					<span class="lottery-span6" data-id="6">
+						<i>{$info.5.name}</i><img src="{$info.5.img}" alt="商品">
+					</span>
+					<span class="lottery-span7" data-id="7">
+						<i>{$info.6.name}</i><img src="{$info.6.img}" alt="商品">
+					</span>
+					<span class="lottery-span8" data-id="8">
+						<i>{$info.7.name}</i><img src="{$info.7.img}" alt="商品">
+					</span>
+					<span class="lottery-span9" data-id="9">
+						<i>{$info.8.name}</i><img src="{$info.8.img}" alt="商品">
+					</span>
+					<span class="lottery-span10" data-id="9">
+						<i>{$info.9.name}</i><img src="{$info.9.img}" alt="商品">
+					</span>
+					<input type="" name="" id="url" style="display: none;" value="{:U('Member/turntable_gl')}">
+				</div>
+			</div>
+		</div>
+		
+		<div class="pointer"><img src="__IMG__/turntable/task_draw_reward_pointer.png"/></div>
+		<div class="turntable_font">
+			<div class="turn_font_right">
+				<img src="__IMG__/turntable/task_draw_reward_clock_icon.png" alt="task_draw_reward_clock_icon"/>
+				<span>抽奖次数:</span>
+				<font id="num">{$num}</font>
+				<span>次</span>
+			</div>
+		</div>
+	</div>
+	
+	<!-- task&rules -->
+	<div class="taskRules">
+		<div class="rules">
+			<div class="task_title">
+				<img src="__IMG__/turntable/task_draw_reward_rule_title_img.png" alt="task_draw_reward_rule_title_img" />
+			</div>
+			<div class="rules_cover">
+				<img src="__IMG__/turntable/task_draw_reward_rule_white_img.png" alt="task_draw_reward_rule_white_img" />
+			</div>
+			<div class="rules_con">
+				<!-- <ul>
+					<li>1、每人<span>1</span>次免费抽奖机会；</li><br />
+					<li class="rules_li">温馨提醒：如果页面未及时显示您的免费机会，请尝试退出本页面再重新进来哦。</li>
+				</ul> -->
+				{$rules}
+				<div id="rules_con_footer" class="rules_con_footer">本活动解释权归XXX所有</div>
+			</div>
+			<div class="rules_footer">点击查看规则</div>
+		</div>
+	</div>
+</body>
+</html>

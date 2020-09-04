@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>我的好友</title>
+<link rel="stylesheet" href="__WCSS__/style.css">
+<link rel="stylesheet" href="__WCSS__/meCen.css">
+<script src="__WJS__/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="__COM__/layer/layer.js"></script>
+<body class="bg96">
+
+<div class="header">
+    <div class="header_l">
+        <a href="javascript:history.go(-1)"><img src="__WIMG__/jiant.png" alt=""></a>
+    </div>
+    <div class="header_c"><h2>我的好友</h2></div>
+    <div class="header_r"></div>
+</div>
+
+<div class="big_width100 por">
+	<div class="sharedata">
+		<ul>
+			<li class="tuguandata01">推荐层级</li>
+			<li class="tuguandata02">团队</li>
+			<li class="tuguandata03">已收订单</li>
+			<li class="tuguandata04">漏单</li>
+		</ul>
+	</div>
+	<ul class="sharemain01">
+		<li>
+			<p>我的收入</p>
+			<p class="monum">{$sum}元</p>
+		</li>
+	</ul>
+	<if condition="$num neq 0">
+	<ul class="sharemain01">
+		<li>
+			<p>剩余订单量</p>
+			<p class="monum">{$num}</p>
+		</li>
+	</ul>
+	</if>
+	<ul class="sharemain">
+		<egt name="level" value="1">
+			<a href="{:U('User/Teamdets?layer=1')}">
+				<li class="sharelist">
+					<p>第一层</p>
+					<p>{$son1}</p>
+					<p>{$indent1}</p>
+					<p>{$lou1}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="2">
+			<a href="{:U('User/Teamdets?layer=2')}">
+				<li class="sharelist">
+					<p>第二层</p>
+					<p>{$son2}</p>
+					<p>{$indent2}</p>
+					<p>{$lou2}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="3">
+			<a href="{:U('User/Teamdets?layer=3')}">
+				<li class="sharelist">
+					<p>第三层</p>
+					<p>{$son3}</p>
+					<p>{$indent3}</p>
+					<p>{$lou3}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="4">
+			<a href="{:U('User/Teamdets?layer=4')}">
+				<li class="sharelist">
+					<p>第四层</p>
+					<p>{$son4}</p>
+					<p>{$indent4}</p>
+					<p>{$lou4}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="5">
+			<a href="{:U('User/Teamdets?layer=5')}">
+				<li class="sharelist">
+					<p>第五层</p>
+					<p>{$son5}</p>
+					<p>{$indent5}</p>
+					<p>{$lou5}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="6">
+			<a href="{:U('User/Teamdets?layer=6')}">
+				<li class="sharelist">
+					<p>第六层</p>
+					<p>{$son6}</p>
+					<p>{$indent6}</p>
+					<p>{$lou6}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="7">
+			<a href="{:U('User/Teamdets?layer=7')}">
+				<li class="sharelist">
+					<p>第七层</p>
+					<p>{$son7}</p>
+					<p>{$indent7}</p>
+					<p>{$lou7}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="8">
+			<a href="{:U('User/Teamdets?layer=8')}">
+				<li class="sharelist">
+					<p>第八层</p>
+					<p>{$son8}</p>
+					<p>{$indent8}</p>
+					<p>{$lou8}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="9">
+			<a href="{:U('User/Teamdets?layer=9')}">
+				<li class="sharelist">
+					<p>第九层</p>
+					<p>{$son9}</p>
+					<p>{$indent9}</p>
+					<p>{$lou9}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="10">
+			<a href="{:U('User/Teamdets?layer=10')}">
+				<li class="sharelist">
+					<p>第十层</p>
+					<p>{$son10}</p>
+					<p>{$indent10}</p>
+					<p>{$lou10}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="11">
+			<a href="{:U('User/Teamdets?layer=11')}">
+				<li class="sharelist">
+					<p>第十一层</p>
+					<p>{$son11}</p>
+					<p>{$indent11}</p>
+					<p>{$lou11}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="12">
+			<a href="{:U('User/Teamdets?layer=12')}">
+				<li class="sharelist">
+					<p>第十二层</p>
+					<p>{$son12}</p>
+					<p>{$indent12}</p>
+					<p>{$lou12}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="13">
+			<a href="{:U('User/Teamdets?layer=13')}">
+				<li class="sharelist">
+					<p>第十三层</p>
+					<p>{$son13}</p>
+					<p>{$indent13}</p>
+					<p>{$lou13}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="14">
+			<a href="{:U('User/Teamdets?layer=14')}">
+				<li class="sharelist">
+					<p>第十四层</p>
+					<p>{$son14}</p>
+					<p>{$indent14}</p>
+					<p>{$lou14}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="15">
+			<a href="{:U('User/Teamdets?layer=15')}">
+				<li class="sharelist">
+					<p>第十五层</p>
+					<p>{$son15}</p>
+					<p>{$indent15}</p>
+					<p>{$lou15}</p>
+				</li>
+			</a>
+		</egt>
+		<egt name="level" value="16">
+			<a href="{:U('User/Teamdets?layer=16')}">
+				<li class="sharelist">
+					<p>第十六层</p>
+					<p>{$son16}</p>
+					<p>{$indent16}</p>
+					<p>{$lou16}</p>
+				</li>
+			</a>
+		</egt>
+	</ul>
+</div>
+<script type="text/javascript">
+    function jihuo(id,pid){
+       
+        $.post('/User/jihuo',{'id':id,'pid':pid},function(res){
+            if(res.status == 1){
+                    layer.msg(res.msg);
+                    setTimeout("location.reload()",1000);
+                }else{
+                    layer.msg(res.msg);
+                    setTimeout("location.reload()",1000);
+                }
+        },'json');
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>我的</title>
+<link rel="stylesheet" href="__WCSS__/style.css">
+<link rel="stylesheet" href="__WCSS__/meCen.css">
+<link rel="stylesheet" href="__LAYUICSS__/layui.css">
+<script src="__WJS__/jquery1.11.1.min.js"></script>
+<script type="text/javascript" src="__COM__/layer/layer.js"></script>
+<script type="text/javascript" src="__COM__/js/index.js" ></script>
+<script type="text/javascript" src="__LAYUIJS__/layui.js"></script>
+
+<body class="bg96">
+
+	<div class="header">
+	    <div class="header_l">
+	    <a href="javascript:history.go(-1)"><img src="__WIMG__/jiant.png" alt=""></a>
+	    </div>
+	    <div class="header_c"><h2>我的</h2></div>
+	    <div class="header_r"></div>
+	</div>
+
+       <div class="big_width100">
+           <div class="headcenter">
+			<div class="headinfo" style="z-index:100;border: none;">
+				<div class="child">
+					<div class="title">好友</div>
+					<div class="num">{$sum}个</div>
+				</div>
+				<div class="child userinfo">
+					<div class="face"><img src="__IMGHEAD__/toux-icon.png"></div>
+					<div class="info" style="padding: 5px 0;">
+						<if condition="$info[is_jihuo] neq 0">
+							<p class="activation"><a href="#">已激活</a></p>
+							<else/>
+							<p class="activation"><a href="#">未激活</a></p>
+						</if>	
+					</div>
+					<div class="name">用户ID:{$info[userid]}</div>
+					<div class="level">{$info[account]}</div>					
+				</div>
+				<div class="child" style="padding-top:10px;">
+					<div class="title">用户等级</div>
+					<div class="num">{$info.userlevel}级用户</div>
+					<div style="height:8px;"></div>
+					<div class="title">用户微信</div>
+					<div class="num">{$info[wx]}</div>
+				</div>
+				<div class="member_header"></div>
+			</div>
+		</div>
+		 
+		<a href="{:U('Shop/Home/index')}">
+			<div class=" grouplistfunction">
+				<p>商城中心</p>
+			</div> 
+		</a>
+		<a href="{:U('User/passwordgl')}">
+		  <div class=" grouplistfunction">
+				<p>安全管理</p>
+	      </div>
+		</a>
+		<a href="{:U('Growth/weixinbinding')}">
+			<div class=" grouplistfunction">
+				<p>收款账户</p>
+			</div>
+		 </a>
+		<a href="{:U('User/Teamdetails')}"> 
+		<div class=" grouplistfunction">
+			<p>我的好友</p>
+	      </div>
+		</a>  
+		<a href="{:U('User/News')}">
+		  <div class=" grouplistfunction">
+			<p>系统公告</p>
+	      </div>
+		</a> 
+		<a href="{:U('User/Complaint')}">  
+		  <div class=" grouplistfunction">
+			<p>意见反馈</p>
+	      </div>
+		</a>  
+		<a href="{:U('User/commonproblem')}">
+		  <div class=" grouplistfunction">
+			<p>常见问题</p>
+	      </div>
+		</a> 
+		<a href="{:U('User/Aboutus')}">
+		  <div class=" grouplistfunction">
+	       	<p>联系客服</p>
+	      </div>
+		</a>  
+          <div class="loginout">
+			<a href="{:U('User/Loginout')}">{$Think.lang.loginout}</a>
+		</div>
+	   </div>
+		
+		<div class="footer-fan">
+			<a href="{:U('Index/index')}">
+				<i class="layui-icon layui-icon-home" style="font-size: 20px; color: #fbd1a7;"></i> 
+				<p>首页</p>
+			</a>
+			<a href="{:U('Growth/Nofinsh')}">
+				<i class="layui-icon layui-icon-auz" style="font-size: 20px; color: #fbd1a7;"></i>
+				<p>批准升级</p>
+			</a>
+			<a href="{:U('User/Sharecode')}">
+				<i class="layui-icon layui-icon-share" style="font-size: 20px; color: #fbd1a7;"></i>
+				<p>分享</p>
+			</a>
+			<a href="{:U('Index/allassets')}">
+				<i class="layui-icon layui-icon-username" style="font-size: 20px; color: #fbd1a7;"></i>
+				<p>我的</p>
+			</a>
+		</div>
+</body>
+
+
+</html>

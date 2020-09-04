@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="__CSS__/turntable/link.css">
+	<title>中奖明细</title>
+	<script type="text/javascript" src="__JS__/turntable/jquery-1.10.2.js"></script>
+	<style>
+		.header{
+			wider:100%;
+			height:40px;
+			line-height:40px;
+		}
+		.header_l{
+			float:left;
+		}
+		.leftimg{
+			width:20px;
+			height:20px;
+			margin-left:7px;
+		}
+		.header_c{
+			font-size:16px;
+			line-height:40px;
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="header_l" style="width: 15%;">
+		  <a href="javascript:window.history.go(-1);"><img class="leftimg" src="/Public/Public/images/lpg.png" alt=""><span></span></a>
+
+		</div>
+		<div class="header_c" style="width: 85%;">中奖明细</div>
+		<div class="header_r"></div>
+	</div>
+	<div class="list">
+		<ul>
+			<volist name="info" id="vo">
+				<li>
+					<div class="list_font_left">
+						 <div class="list_font1">恭喜您已中奖</div>
+						 <!-- <div class="list_font3">领取码：kwf75f62</div> -->
+						 <div class="list_font2">{$vo.time|date="y-m-d",###}</div>
+					</div>
+					<div class="list_font_right">{$vo.name}</div>
+				</li>
+			</volist>
+			<li class="list_special">暂无更多数据哦</li>
+		</ul>
+	</div>
+</body>
+</html>

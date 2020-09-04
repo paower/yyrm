@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>优惠券</title>
+  <link rel="stylesheet" href="__CSS__/coupons/weui.css"/>
+  <link rel="stylesheet" href="__CSS__/coupons/weuix.css"/>
+
+
+  <script src="__JS__/coupons/zepto.min.js"></script>
+  <script src="__JS__/coupons/zepto.weui.js"></script>
+  <script src="__JS__/coupons/iscroll-lite.js"></script>
+  <script src="__JS__/coupons/common.js"></script>
+
+<style>
+		.header{
+			wider:100%;
+			height:45px;
+			line-height:45px;
+		}
+		.header_l{
+			float:left;
+		}
+		.leftimg{
+			width:20px;
+			height:20px;
+			margin-left:7px;
+		}
+		.header_c{
+			font-size:16px;
+			line-height:45px;
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="header_l" style="width: 15%;">
+		  <a href="javascript:window.history.go(-1);"><img class="leftimg" src="/Public/Public/images/lpg.png" alt=""><span></span></a>
+
+		</div>
+		<div class="header_c" style="width: 85%;">优惠券</div>
+		<div class="header_r"></div>
+	</div>
+    <div class="weui-tab" id="t1" style="height:44px;">
+        <div class="weui-navbar">
+            <div class="weui-navbar__item">未使用</div>
+            <div class="weui-navbar__item">使用过</div>
+            <div class="weui-navbar__item">已过期</div>
+        </div>
+    </div>
+
+    <div class="weui-cells">
+        <div class="weui-cell">
+            <div class="weui-cell__hd" style="position: relative;margin-right: 10px;">
+                <img src="__IMG__/coupons.jpg" style="width: 50px;display: block">
+            </div>
+            <div class="weui-cell__bd">
+                <p>优惠券一</p>
+                <p style="font-size: 13px;color: red;">满1000减100元</p>
+                <p style="font-size: 13px;color: #888888;">到期时间：2020-12-12</p>
+            </div>
+      			<div class="weui-cell__right">
+      				<p>未使用</p>
+      				<!-- <p>已使用</p> -->
+      				<!-- <p>已过期</p> -->
+      			</div>
+        </div>
+    </div>
+
+    <div style="height:55px;"></div>
+    <input id="url" type="hidden" name="" value="{:U('home/coupons')}">
+    <script>  
+        $(function(){
+            $('#t1').tab({
+                defaultIndex: 0,
+                activeClass: 'tab-green',
+                onToggle: function (index) {
+                  var url = $('#url').val();
+                  $.ajax({
+                    type:'POST',
+                    url:url,
+                    data:{id:index},
+                    success:function(res){
+                      $('.weui-cells').html(res.message);
+                    }
+                  })
+                }
+            })
+        })
+    </script>
+</body>
+</html>
